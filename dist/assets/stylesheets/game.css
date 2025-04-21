@@ -1,0 +1,118 @@
+html body {
+  margin: 0;
+  overscroll-behavior-y: none;
+    
+}
+
+.container {
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  --s: 105px; 
+  --c1: #4e4e4e;
+  --c2: rgb(46, 46, 46);
+  --c3: #000000;
+
+  background: conic-gradient(
+        from 75deg,
+        var(--c1) 15deg,
+        var(--c2) 0 30deg,
+        #0000 0 180deg,
+        var(--c2) 0 195deg,
+        var(--c1) 0 210deg,
+        #0000 0
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) / 0.577),
+    conic-gradient(
+      var(--c1) 30deg,
+      var(--c3) 0 75deg,
+      var(--c1) 0 90deg,
+      var(--c2) 0 105deg,
+      var(--c3) 0 150deg,
+      var(--c2) 0 180deg,
+      var(--c3) 0 210deg,
+      var(--c1) 0 256deg,
+      var(--c2) 0 270deg,
+      var(--c1) 0 286deg,
+      var(--c2) 0 331deg,
+      var(--c3) 0
+    );
+  background-size: var(--s) calc(var(--s) / 0.577);
+  
+}
+
+
+canvas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 4px solid rgb(164, 4, 4);
+  border-radius: 15px;
+
+}
+
+footer {
+  padding: 10px;
+  height: 100px;
+  width: 776px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: grey;
+  border-radius: 15px 15px 0 0;
+}
+
+
+.fab {
+  color: silver;
+  text-decoration: none;
+  font-size: 35px;
+  float: right;
+  margin: 65px 5px 0 5px;
+}
+
+.fab:hover{
+  color: white;
+  cursor: pointer;
+}
+
+#logo {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+#game-container {
+  position: relative;
+  margin: 20px;
+  height: 800px;
+}
+
+#menu-canvas {
+  z-index: 4;
+}
+
+#sprite-canvas {
+  z-index: 3;
+}
+
+#map-canvas {
+  z-index: 2;
+}
+
+#collision-canvas {
+  z-index: 1;
+}
+
+#canvas-underlayer {
+  background-color: black;
+  height: 696px;
+  width: 768px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid silver;
+  border-radius: 15px;
+}
